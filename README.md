@@ -40,4 +40,4 @@ MIT (https://opensource.org/licenses/MIT)
 # Créditos
 [![Matheus Gontijo](https://avatars1.githubusercontent.com/u/3246183?s=100)](https://github.com/matheusgontijo)
 ---
-[Matheus Gontijo](https://github.com/matheusgontijo)<br>Curitiba, Brazil
+[Matheus Gontijo](https://github.com/matheusgontijo)<br>Curitiba, PR
