@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
+
+/**
  * Those parameters suppose to be equals to
  * www/app/config/parameters.yml
  */
