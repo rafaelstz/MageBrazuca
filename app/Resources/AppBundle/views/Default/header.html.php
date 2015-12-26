@@ -1,4 +1,10 @@
 <?php
+/**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
+?>
+
+<?php
     $userHelper  = $view['userHelper'];
     $searchQuery = isset($searchQuery) ? $searchQuery : null;
 ?>

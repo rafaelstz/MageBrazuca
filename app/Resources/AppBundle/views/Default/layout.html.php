@@ -1,11 +1,19 @@
 <?php
+/**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
+?>
+
+<?php
     $userHelper = $view['userHelper'];
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php if (isset($title)) : echo $title; ?> - <?php endif; ?>MageBrazuca</title>
+    <link rel="shortcut icon" href="/favicon.ico" title="Favicon" />
     <link rel="stylesheet" href="/css/main.css" type="text/css" media="all" />
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>

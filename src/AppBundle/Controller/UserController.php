@@ -10,6 +10,9 @@ use AppBundle\Entity\User;
 use AppBundle\Service\ServiceException;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
 class UserController extends AbstractController
 {
     /**

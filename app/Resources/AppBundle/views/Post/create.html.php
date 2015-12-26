@@ -1,3 +1,9 @@
+<?php
+/**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
+?>
+
 <?php $view->extend('AppBundle:Default:layout.html.php'); ?>
 
 <h1>Novo Post</h1>

@@ -16,7 +16,6 @@ use Symfony\Component\Validator\Constraints;
 use Symfony\Component\Validator\Validator;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-
 /**
  * @author Matheus Gontijo <matheus@matheusgontijo.com>
  */

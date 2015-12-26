@@ -10,6 +10,9 @@ use AppBundle\Helper\UserHelper;
 use AppBundle\Service\ServiceException;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
 abstract class AbstractController extends Controller
 {
     /**

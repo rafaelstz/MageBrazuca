@@ -1,4 +1,8 @@
 /**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
+
+/**
  * =============================
  * ========== BASE
  * =============================

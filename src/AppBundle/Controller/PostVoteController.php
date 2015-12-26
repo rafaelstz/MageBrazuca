@@ -9,6 +9,9 @@ use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\PostVote;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
 class PostVoteController extends AbstractController
 {
     /**

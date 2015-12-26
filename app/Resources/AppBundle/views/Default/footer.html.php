@@ -1,3 +1,9 @@
+<?php
+/**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
+?>
+
 <?php /*<div id="footer-full">
     <div id="footer">
         <ul id="footer-links">

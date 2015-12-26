@@ -1,3 +1,7 @@
+/**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
+
 var PostCreate = PostCreate || {};
 
 PostCreate = {

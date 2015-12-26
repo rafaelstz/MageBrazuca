@@ -11,6 +11,9 @@ use Gaufrette\Filesystem;
 use Gaufrette\Adapter\Local as LocalAdapter;
 use Symfony\Component\DependencyInjection\ContainerInterface as Container;
 
+/**
+ * @author Matheus Gontijo <matheus@matheusgontijo.com>
+ */
 class UserHelper extends Helper
 {
     /**
