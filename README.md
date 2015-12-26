@@ -1,5 +1,5 @@
 <a href="http://magebrazuca.com/">
-	<img src="blob:https%3A//drive.google.com/4773ced8-59a0-4da7-b8ab-27190d593995" alt="MageBrazuca">
+	<img src="http://oi66.tinypic.com/9tes00.jpg" alt="MageBrazuca">
 </a>
 
 > MageBrazuca é um projeto para que a Comunidade Magento no Brasil possa conhecer grandes nomes nacionais, estimular à todos que compartilhem conteúdos de qualidade, e enriquecer o networking entre os desenvolvedores.
