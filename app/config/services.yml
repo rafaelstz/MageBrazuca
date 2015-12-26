@@ -1,0 +1,56 @@
+services:
+    mage_brazuca.helper.service:
+        class: AppBundle\Service\HelperService
+
+    mage_brazuca.user.service:
+        class: AppBundle\Service\UserService
+        arguments:
+            - "@mage_brazuca.user.repository"
+            - "@service_container"
+            - "@validator"
+
+    mage_brazuca.post.service:
+        class: AppBundle\Service\PostService
+        arguments:
+            - "@mage_brazuca.post.repository"
+            - "@validator"
+
+    mage_brazuca.post_vote.service:
+            class: AppBundle\Service\PostVoteService
+            arguments:
+                - "@mage_brazuca.post_vote.repository"
+                - "@mage_brazuca.post.repository"
+
+    mage_brazuca.user.repository:
+            class: AppBundle\Repository\UserRepository
+            factory_service: doctrine.orm.default_entity_manager
+            factory_method: getRepository
+            arguments:
+                - AppBundle\Entity\User
+
+    mage_brazuca.post.repository:
+                class: AppBundle\Repository\PostRepository
+                factory_service: doctrine.orm.default_entity_manager
+                factory_method: getRepository
+                arguments:
+                    - AppBundle\Entity\Post
+
+    mage_brazuca.post_vote.repository:
+                class: AppBundle\Repository\PostVoteRepository
+                factory_service: doctrine.orm.default_entity_manager
+                factory_method: getRepository
+                arguments:
+                    - AppBundle\Entity\PostVote
+
+    mage_brazuca.user.helper:
+        class: AppBundle\Helper\UserHelper
+        tags:
+            - { name: templating.helper, alias: userHelper }
+        arguments:
+            - "@service_container"
+            - "@mage_brazuca.user.repository"
+
+    mage_brazuca.post.helper:
+        class: AppBundle\Helper\PostHelper
+        tags:
+            - { name: templating.helper, alias: postHelper }
