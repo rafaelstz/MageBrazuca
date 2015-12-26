@@ -1,27 +1,23 @@
-[ >>>> LOGO <<<< ]
+<a href="http://magebrazuca.com/">
+	<img src="blob:https%3A//drive.google.com/4773ced8-59a0-4da7-b8ab-27190d593995" alt="MageBrazuca">
+</a>
 
---- MageBrazuca
-
-MageBrazuca é um projeto para que a Comunidade Magento no Brasil possa conhecer grandes nomes nacionais, estimular à todos que compartilhem conteúdos de qualidade, e enriquecer o networking entre os desenvolvedores.
-
-
+> MageBrazuca é um projeto para que a Comunidade Magento no Brasil possa conhecer grandes nomes nacionais, estimular à todos que compartilhem conteúdos de qualidade, e enriquecer o networking entre os desenvolvedores.
 
 
---- Perguntas Frequentes
 
-- Por que o projeto foi criado?
+# Perguntas Frequentes
+
+## Por que o projeto foi criado?
 
 A Comunidade Magento no Brasil embora grande é pouquíssima ativa. Portanto, a missão do projeto é engajar a comunidade, estimulando cada desenvolvedor à abraçar a causa e fazer a sua parte.
 
-
-
-- Por que devo ler o conteúdo publicado?
+## Por que devo ler o conteúdo publicado?
 
 Um vasto conteúdo de qualidade sobre o Magento pode ser encontrado aqui. Portanto, melhore suas competências sobre a plataforma. Tais como: padrões, boas práticas, ferramentas, metodologias, novidades e muito mais.
 
 
-
-- Por que devo contribuir?
+## Por que devo contribuir?
 
 Os motivos são infinitos. Alguns deles são:
 
@@ -31,18 +27,17 @@ Os motivos são infinitos. Alguns deles são:
 
 
 
-- Posso ajudar a desenvolver o MageBrazucas?
+## Posso ajudar a desenvolver o MageBrazucas?
 
 Sim! Você deve! Por favor!
 Todo o projeto é 100% software livre! FORK AGORA!
 
 
---- Licença
+# Licença
 
 MIT (https://opensource.org/licenses/MIT)
 
-
-
---- Créditos
-aquela gradezinha - autorr.....
-Matheus Gontijo.
+# Créditos
+[![Matheus Gontijo](https://avatars1.githubusercontent.com/u/3246183?s=100)](https://github.com/matheusgontijo)
+---
+[Matheus Gontijo](https://github.com/matheusgontijo)<br>Curitiba, Brazil
