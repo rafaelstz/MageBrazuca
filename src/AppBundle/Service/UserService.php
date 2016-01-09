@@ -23,7 +23,7 @@ use Symfony\Component\HttpFoundation\ParameterBag;
  */
 class UserService extends AbstractService
 {
-    const USER_IMAGE_FOLDER    = 'web/user/image';
+    const USER_IMAGE_FOLDER    = 'user/image';
     const USER_IMAGE_EXTENSION = 'jpg';
 
     /**
