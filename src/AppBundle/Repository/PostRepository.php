@@ -4,6 +4,7 @@ namespace AppBundle\Repository;
 
 use AppBundle\Entity\Post;
 use AppBundle\Entity\User;
+use AppBundle\Service\PostService;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Query\ResultSetMapping;
 
@@ -121,6 +122,54 @@ class PostRepository extends AbstractRepository
     /**
      * @return object
      */
+    public function getAllToHome()
+    {
+        $rsm = new ResultSetMapping();
+
+        $rsm->addEntityResult('AppBundle\Entity\Post', 'p');
+        $rsm->addFieldResult('p', 'post_id', 'id');
+        $rsm->addFieldResult('p', 'post_title', 'title');
+        $rsm->addFieldResult('p', 'post_url', 'url');
+        $rsm->addFieldResult('p', 'post_tag', 'tag');
+        $rsm->addFieldResult('p', 'post_upvote_total', 'upvoteTotal');
+        $rsm->addFieldResult('p', 'post_created_at', 'createdAt');
+
+        $rsm->addJoinedEntityResult('AppBundle\Entity\User', 'u', 'p', 'user');
+        $rsm->addFieldResult('u', 'user_id', 'id');
+        $rsm->addFieldResult('u', 'user_username', 'username');
+        $rsm->addFieldResult('u', 'user_picture_path', 'picturePath');
+
+        $sql = sprintf("
+        SELECT
+            p.id           AS post_id,
+            p.title        AS post_title,
+            p.url          AS post_url,
+            p.tag          AS post_tag,
+            p.upvote_total AS post_upvote_total,
+            p.created_at   AS post_created_at,
+            p.updated_at   AS post_updated_at,
+            u.id           AS user_id,
+            u.username     AS user_username,
+            u.picture_path AS user_picture_path
+        FROM
+            post AS p
+        LEFT JOIN
+            user AS u ON u.id = p.user_id
+        ORDER BY
+            p.created_at DESC
+        LIMIT
+            %d
+        ",
+        PostService::ALL_POST_LIMIT);
+
+        $query = $this->_em->createNativeQuery($sql, $rsm);
+
+        return $query->getResult();
+    }
+
+    /**
+     * @return object
+     */
     public function getAll($offset, $limit)
     {
         $rsm = new ResultSetMapping();
@@ -159,8 +208,8 @@ class PostRepository extends AbstractRepository
         LIMIT
             %d, %d
         ",
-        $offset,
-        $limit);
+            $offset,
+            $limit);
 
         $query = $this->_em->createNativeQuery($sql, $rsm);
 

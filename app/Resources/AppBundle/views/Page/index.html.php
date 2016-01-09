@@ -11,28 +11,53 @@
     $userHelper = $view['userHelper'];
 ?>
 
-<div id="home-column-most-voted-of-the-month" class="home-column">
-    <h2 id="home-most-voted-of-the-month-title" class="home-column-title">Os mais votados da semana</h2>
-    <a id="home-most-voted-of-the-month-see-all" class="home-column-see-all" href="/post/all">Ver todos os posts</a>
-    <?php foreach ($mostVotedOfTheWeek as $post) : ?>
-    <div class="post">
-        <div class="post-upvotes" id="post-upvote-<?php echo $post->getId(); ?>" onclick="PostVote.vote(<?php echo $post->getId(); ?>, <?php echo $post->getUser()->getId(); ?>)"><?php echo $post->getUpvoteTotal(); ?></div>
-        <div class="post-title">
-            <a class="post-title-link" href="<?php echo $post->getUrl(); ?>" target="_blank"><?php echo $post->getTitle(); ?></a>
-        </div>
-        <div class="post-user-box">
-            <a class="post-user-image" href="/user/<?php echo $post->getUser()->getUsername(); ?>" <?php if ($post->getUser()->getPicturePath()) : echo $userHelper->getImageStyleToPostList($post->getUser()->getPicturePath()); endif; ?>></a>
-            <span class="post-user-username">by <a class="post-user-username-link" href="/user/<?php echo $post->getUser()->getUsername(); ?>"><?php echo $post->getUser()->getUsername(); ?></a></span>
-        </div>
-        <div class="post-tags-and-date-box">
-            <div class="post-tags">
-                <?php echo $postHelper->getFormattedTag($post->getTag()); ?>
+<div id="home-column-posts" class="home-column">
+    <div id="home-most-voted-of-the-month">
+        <h2 id="home-most-voted-of-the-month-title" class="home-column-title">Os mais votados da semana</h2>
+        <a id="home-most-voted-of-the-month-see-all" class="home-column-see-all" href="/post/all">Ver todos os posts</a>
+        <?php foreach ($mostVotedOfTheWeek as $post) : ?>
+            <div class="post">
+                <div class="post-upvotes" id="post-upvote-<?php echo $post->getId(); ?>" onclick="PostVote.vote(<?php echo $post->getId(); ?>, <?php echo $post->getUser()->getId(); ?>)"><?php echo $post->getUpvoteTotal(); ?></div>
+                <div class="post-title">
+                    <a class="post-title-link" href="<?php echo $post->getUrl(); ?>" target="_blank"><?php echo $post->getTitle(); ?></a>
+                </div>
+                <div class="post-user-box">
+                    <a class="post-user-image" href="/user/<?php echo $post->getUser()->getUsername(); ?>" <?php if ($post->getUser()->getPicturePath()) : echo $userHelper->getImageStyleToPostList($post->getUser()->getPicturePath()); endif; ?>></a>
+                    <span class="post-user-username">by <a class="post-user-username-link" href="/user/<?php echo $post->getUser()->getUsername(); ?>"><?php echo $post->getUser()->getUsername(); ?></a></span>
+                </div>
+                <div class="post-tags-and-date-box">
+                    <div class="post-tags">
+                        <?php echo $postHelper->getFormattedTag($post->getTag()); ?>
+                    </div>
+                    <span class="post-title-date"><?php echo $postHelper->getFormattedDate($post->getCreatedAt()); ?></span>
+                </div>
             </div>
-            <span class="post-title-date"><?php echo $postHelper->getFormattedDate($post->getCreatedAt()); ?></span>
-        </div>
+            <input type="hidden" name="post_id[]" value="<?php echo $post->getId(); ?>" />
+        <?php endforeach; ?>
     </div>
-    <input type="hidden" name="post_id[]" value="<?php echo $post->getId(); ?>" />
-    <?php endforeach; ?>
+    <div id="home-all-posts">
+        <h2 id="home-all-posts-title" class="home-column-title">Posts mais recentes</h2>
+        <?php foreach ($allPosts as $post) : ?>
+            <div class="post">
+                <div class="post-upvotes" id="post-upvote-<?php echo $post->getId(); ?>" onclick="PostVote.vote(<?php echo $post->getId(); ?>, <?php echo $post->getUser()->getId(); ?>)"><?php echo $post->getUpvoteTotal(); ?></div>
+                <div class="post-title">
+                    <a class="post-title-link" href="<?php echo $post->getUrl(); ?>" target="_blank"><?php echo $post->getTitle(); ?></a>
+                </div>
+                <div class="post-user-box">
+                    <a class="post-user-image" href="/user/<?php echo $post->getUser()->getUsername(); ?>" <?php if ($post->getUser()->getPicturePath()) : echo $userHelper->getImageStyleToPostList($post->getUser()->getPicturePath()); endif; ?>></a>
+                    <span class="post-user-username">by <a class="post-user-username-link" href="/user/<?php echo $post->getUser()->getUsername(); ?>"><?php echo $post->getUser()->getUsername(); ?></a></span>
+                </div>
+                <div class="post-tags-and-date-box">
+                    <div class="post-tags">
+                        <?php echo $postHelper->getFormattedTag($post->getTag()); ?>
+                    </div>
+                    <span class="post-title-date"><?php echo $postHelper->getFormattedDate($post->getCreatedAt()); ?></span>
+                </div>
+            </div>
+            <input type="hidden" name="post_id[]" value="<?php echo $post->getId(); ?>" />
+        <?php endforeach; ?>
+        <a id="home-all-posts-see-all" class="home-column-see-all" href="/post/all">Ver todos os posts</a>
+    </div>
 </div>
 <div id="home-column-top-users" class="home-column">
     <h2 id="top-developers-title" class="home-column-title">Top Desenvolvedores</h2>

@@ -413,7 +413,8 @@ class UserService extends AbstractService
         return false;
     }
 
-    public function moveImageFromTmpToFolder(UploadedFile $file) {
+    public function moveImageFromTmpToFolder(UploadedFile $file)
+    {
         $oldFilePath = $file->getPathname();
 
         $filename = uniqid() . uniqid();

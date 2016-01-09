@@ -140,6 +140,10 @@ fieldset {
     margin: 0 auto;
 }
 
+#content {
+    margin-bottom: 50px;
+}
+
 .content-with-no-width {
     width: auto !important;
 }
@@ -341,7 +345,7 @@ fieldset {
     position: relative;
 }
 
-#home-column-most-voted-of-the-month {
+#home-column-posts {
     width: 750px;
     margin: 0 50px 0 0;
 }
@@ -355,7 +359,8 @@ fieldset {
     text-transform: uppercase;
 }
 
-#home-most-voted-of-the-month-title {
+#home-most-voted-of-the-month-title,
+#home-all-posts-title {
     background: url(../images/home-most-voted-of-the-month-title-background.png) 0 3px no-repeat;
     padding: 3px 0 0 46px;
 }
@@ -376,8 +381,21 @@ fieldset {
     font-size: 14px !important;
 }
 
+#home-all-posts-title {
+    margin-top: 70px;
+}
 
-
+#home-all-posts-see-all {
+    padding: 8px 20px;
+    border-radius: 5px;
+    background: #ef672f;
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 25px !important;
+}
 
 
 /* =============================
@@ -696,5 +714,6 @@ fieldset {
    ======= Clear
    ============================= */
 .clear:after,
+#content:after,
 #user-view-contacts-box:after
 { display: block; content: "."; clear: both; font-size: 0; line-height: 0; height: 0; overflow: hidden; }

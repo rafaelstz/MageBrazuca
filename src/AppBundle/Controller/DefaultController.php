@@ -22,11 +22,13 @@ class DefaultController extends Controller
         $userService = $this->get('mage_brazuca.user.service');
 
         $mostVotedOfTheWeek  = $postService->getMostVotedOfTheWeek();
+        $allPosts            = $postService->getAllToHome();
         $topDevelopers       = $userService->getTop();
 
         return $this->render('AppBundle:Page:index.html.php', array(
             'title'              => 'Comunidade Magento do Brasil: Os melhores desenvolvedores estão aqui!',
             'mostVotedOfTheWeek' => $mostVotedOfTheWeek,
+            'allPosts'           => $allPosts,
             'topDevelopers'      => $topDevelopers,
         ));
     }

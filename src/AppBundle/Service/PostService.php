@@ -173,6 +173,14 @@ class PostService extends AbstractService
     }
 
     /**
+     * @return object
+     */
+    public function getAllToHome()
+    {
+        return $this->repository->getAllToHome();
+    }
+
+    /**
      * @param int $page
      * @return object
      */
