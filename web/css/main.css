@@ -578,7 +578,7 @@ fieldset {
     font-weight: bold;
     color: #808080 !important;
     text-decoration: none !important;
-    margin-bottom: 65px;
+    margin-bottom: 15px;
     display: block;
 }
 
@@ -588,11 +588,10 @@ fieldset {
 }
 
 .post-tags-and-date-box {
-    position: absolute;
-    bottom: 10px;
-    left: 125px;
     color: #ABABAB !important;
     font-size: 15px;
+    margin: 0 0 0 125px;
+    width: 550px;
 }
 
 .post-tags {
