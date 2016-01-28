@@ -29,7 +29,7 @@
             <div id="user-view-contacts-box">
                 <?php if ($user->getContactWebsite()) : ?>
                 <a id="user-view-user-website" class="user-view-user-contact" href="<?php echo $user->getContactWebsite(); ?>" target="_blank">
-                    <i class="fa fa-globe tooltip user-view-user-contact-icon" title="Magento Certified Developer"></i>
+                    <i class="fa fa-globe tooltip user-view-user-contact-icon" title="Website"></i>
                 </a>
                 <?php endif; ?>
                 <?php if ($user->getContactTwitter()) : ?>
@@ -39,7 +39,7 @@
                 <?php endif; ?>
                 <?php if ($user->getContactLinkedIn()) : ?>
                 <a id="user-view-user-linkedin" class="user-view-user-contact" href="<?php echo $user->getContactLinkedIn(); ?>" target="_blank">
-                    <i class="fa fa-linkedin tooltip user-view-user-contact-icon" title="Twitter"></i>
+                    <i class="fa fa-linkedin tooltip user-view-user-contact-icon" title="LinkedIn"></i>
                 </a>
                 <?php endif; ?>
                 <?php if ($user->getContactCertification()) : ?>
@@ -49,12 +49,12 @@
                 <?php endif; ?>
                 <?php if ($user->getContactGithub()) : ?>
                 <a id="user-view-user-github" class="user-view-user-contact" href="https://www.github.com/<?php echo $user->getContactGithub(); ?>" target="_blank">
-                    <i class="fa fa-github tooltip user-view-user-contact-icon" title="Magento Certified Developer"></i>
+                    <i class="fa fa-github tooltip user-view-user-contact-icon" title="Github"></i>
                 </a>
                 <?php endif; ?>
                 <?php if ($user->getContactStackOverflow()) : ?>
                 <a id="user-view-user-stackoverflow" class="user-view-user-contact" href="<?php echo $user->getContactStackOverflow(); ?>" target="_blank">
-                    <i class="fa fa-stack-overflow tooltip user-view-user-contact-icon" title="Magento Certified Developer"></i>
+                    <i class="fa fa-stack-overflow tooltip user-view-user-contact-icon" title="Stack Overflow"></i>
                 </a>
                 <?php endif; ?>
             </div>
